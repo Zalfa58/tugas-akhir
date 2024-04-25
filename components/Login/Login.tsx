@@ -18,11 +18,23 @@ import {
     PaddingContainer
 } from '@/components/common/'
 import Link from "next/link";
+import firebase from 'firebase/app';
+import 'firebase/auth';
+// if (!firebase.apps.length) {
+//     firebase.initializeApp({
+//       apiKey: "YOUR_API_KEY",
+//       authDomain: "YOUR_AUTH_DOMAIN",
+//       projectId: "YOUR_PROJECT_ID",
+//       // tambahkan konfigurasi lainnya
+//     });
+//   }
+
 
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [rememberPassword, setRememberPassword] = useState(false);
+    
 
     const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
@@ -83,13 +95,6 @@ export default function Login() {
                                     />
                                     <label htmlFor="rememberPassword">Remember Password</label>
                                 </CheckBox>
-                                <ForgotPassword>
-                                    <Link href={""}>
-                                        <p>
-                                            Forgot Password?
-                                        </p>
-                                    </Link>
-                                </ForgotPassword>
                             </OptionRemember>
                             <LoginButton>
                                 <button type="submit"><p>Login</p></button>
@@ -98,7 +103,7 @@ export default function Login() {
                                 <p className="p-text">
                                     Don't have an account?
                                 </p>
-                                <Link href={""}>
+                                <Link href={'/create-account'}>
                                     <p className="register-text">
                                         Register
                                     </p>

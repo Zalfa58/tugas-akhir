@@ -16,7 +16,7 @@ export const CreateCard = styled.div`
     height: 600px;
     background: url(${BackgroundCard.src});
     background-size: cover;
-    border-radius: 50px;
+    border-radius: 20px;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -37,6 +37,10 @@ export const InputCard = styled.div`
     display: grid;
     align-items: center;
     margin-top: -50px;
+    form{
+        gap: 20px;
+        display: grid;
+    }
 `
 
 export const Input = styled.div`

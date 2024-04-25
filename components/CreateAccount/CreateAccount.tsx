@@ -97,12 +97,14 @@ export default function CreateAccount() {
                                     onChange={handleConfirmPasswordChange}
                                 />
                                 </InputForm>
-                                
                             </Input>
                             <ButtonPosition>
-                                <Button type="submit">
-                                    Create Account
-                                </Button>
+                                <Link href={'/'}>
+                                    <Button type="submit">
+                                        Create Account
+                                    </Button>   
+                                </Link>
+                                
                             </ButtonPosition>
                         </form>
                     </InputCard>
