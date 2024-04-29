@@ -1,10 +1,12 @@
-import React from 'react';
-import { Padding } from './paddingContainer.styled';
+import { ReactNode } from "react";
 
-interface PaddingProps {
-  children: React.ReactNode;
+interface PaddingContainerProps {
+  children: ReactNode;
 }
-
-export default function PaddingContainer({ children }: PaddingProps) {
-  return <Padding>{children}</Padding>;
+export default function PaddingContainer({ children }: PaddingContainerProps) {
+  return (
+    <section className="px-[16px] md:px-[80px] max-w-[1280px] m-auto">
+      {children}
+    </section>
+  );
 }

@@ -1,3 +1,3 @@
-export { default as PaddingContainer } from './PaddingContainer/paddingContainer';
-export { default as Navbar } from './NavbarLeft/navbar';
-export { default as Card } from './CardImage/card'
+export { default as PaddingContainer } from "./PaddingContainer/PaddingContainer";
+export { default as Navbar } from "./Navbar/Navbar";
+export { default as Card } from "./Card/Card";
